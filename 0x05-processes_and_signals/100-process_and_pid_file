@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
-
 # Creates the file /var/run/myscript.pid containing its PID
-terminator()
-{
+terminator() {
 	rm /var/run/myscript.pid
 	exit
 }
