@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# stops 4-to_infinity_and_beyond process.
+prog_name="4-to_infinity_and_beyond"
+if [ -e "$prog_name" ]
+then
+    pid=$(pgrep "$prog_name")
+    if [ -n "$pid" ]
+    then
+        kill "$pid"
+    fi
+fi
