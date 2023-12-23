@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+ps axj | grep "bash"
+# shellcheck disable=SC2009
