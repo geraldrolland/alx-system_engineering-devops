@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Display a header for the process list
 pgrep -lf bash | while read -r line; do
     pid=$(echo "$line" | awk '{print $1}')
