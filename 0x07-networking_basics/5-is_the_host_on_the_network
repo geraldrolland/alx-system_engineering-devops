@@ -2,5 +2,5 @@
 #pings an IP address passed as an argument.
 for ip in "$@"
 do
-    ping "$ip"
+    ping -c 5 "$ip"
 done
