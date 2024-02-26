@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+# This script make changes to our configuration file.
 file {'/home/root/.ssh/config':
 	ensure => present,
 	owner => 'root',
