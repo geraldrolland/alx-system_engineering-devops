@@ -3,6 +3,7 @@
 sudo  apt-get -y update
 sudo  apt-get -y install nginx
 sudo ufw allow "Nginx HTTP"
-sudo bash -c 'echo "Hello World!" > /var/www/html/index.html'
-sudo chmod 644 /var/www/html/index.html
+sudo cp /var/www/html/index.nginx-debian.html /var/www/html/index.nginx-debian-copy.html
+sudo chmod 644 /var/www/html/index.nginx-debian.html
+sudo bash -c 'echo "Hello World!" > /var/www/html/index.nginx-debian.html'
 
