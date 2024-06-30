@@ -1,3 +1,4 @@
+#This script creates a fille named school in tmp
 file { '/tmp/school':
   ensure  => 'present',
   mode    => '0744',
