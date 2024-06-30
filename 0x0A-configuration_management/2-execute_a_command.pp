@@ -1,4 +1,4 @@
 #This scripts kills the process killmenow
 exec { 'pkill':
-  command => 'sudo pkill killmenow'
+  command => '/usr/bin/pkill killmenow'
 }
