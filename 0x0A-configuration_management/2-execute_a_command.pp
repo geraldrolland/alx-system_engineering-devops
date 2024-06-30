@@ -1,3 +1,3 @@
 exec { 'pkill':
-         command => 'pkill killmenow'
+  command => 'pkill killmenow'
 }
