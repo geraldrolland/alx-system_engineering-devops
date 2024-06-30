@@ -1,8 +1,10 @@
-#This scripts installs flask
-package { 'python3':
-  ensure => '3.8.10'
+# Ensure that pip3 is installed and up to date
+package { 'python3-pip':
+  ensure => 'present',
 }
-exec { 'flask':
-  command => '/usr/bin/pip3 flask',
-  require => Package['python3']
+
+package { 'flask':
+  ensure   => '2.1.0',
+  provider => 'pip3',
+  require  => Package['python3-pip'],
 }
