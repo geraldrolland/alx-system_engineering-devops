@@ -1,4 +1,8 @@
 #This scripts installs flask
-package { 'flask':
-  ensure => '2.1.0'
+package { 'python3':
+  ensure => '3.8.10'
+}
+exec { 'flask':
+  command => '/usr/bin/pip3 flask',
+  require => Package['python3']
 }
