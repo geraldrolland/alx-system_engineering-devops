@@ -1,12 +1,19 @@
-#setup ssh client configuration
+# Ensure the .ssh directory exists with appropriate permissions
 file { '/root/.ssh':
-  ensure => 'directory'
+  ensure => 'directory',
+  mode   => '0700',
+  owner  => 'root',
+  group  => 'root',
 }
 file { '/root/.ssh/config':
   ensure  => 'present',
+  mode    => '0600',
+  owner   => 'root',
+  group   => 'root',
   content => "
-    host *
-       IdentityFile ~/.ssh/school
-       PasswordAuthentication no
+    Host *
+        PasswordAuthentication no
+        IdentityFile ~/.ssh/school
   ",
 }
+
