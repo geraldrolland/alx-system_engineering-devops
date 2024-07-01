@@ -4,5 +4,9 @@ file { '/root/.ssh':
 }
 file { '/root/.ssh/config':
   ensure  => 'present',
-  content => template('/etc/ssh/config.erb')
+  content => "
+    host *
+       IdentityFile ~/.ssh/school
+       PasswordAuthentication no
+  ",
 }
