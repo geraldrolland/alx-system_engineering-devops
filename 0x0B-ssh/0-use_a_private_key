@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#logs in  to a remote server with ip 54.237.103.68
+ssh -i ~/.ssh/school ubuntu@54.237.103.68
